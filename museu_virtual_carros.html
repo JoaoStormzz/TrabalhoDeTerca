@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Museu Virtual de Carros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">MV</div>
+      <div>
+        <h1>Museu Virtual de Carros</h1>
+        <p class="lead">Explore clássicos, esportivos e conceitos — tudo em uma galeria interativa</p>
+      </div>
+    </div>
+    <div class="search">
+      <input id="q" placeholder="Pesquisar por modelo, ano ou categoria...">
+    </div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="hero">
+        <h2>Visite nossa coleção</h2>
+        <p>Galeria curada com carros históricos e protótipos. Clique em qualquer veículo para ver detalhes.</p>
+        <div class="filters">
+          <button class="coloracao" data-filter="all">Todos</button>
+          <button class="coloracao" data-filter="Volkswagen">Volkswagen</button>
+          <button class="coloracao" data-filter="Ford">Ford</button>
+          <button class="coloracao" data-filter="Ferrari">Ferrari</button>
+          <button class="coloracao" data-filter="Porsche">Porsche</button>
+           <button class="coloracao" data-filter="BMW">BMW</button>
+        </div>
+      </div>
+    </section>
+    <section class="gallery" id="gallery">
+      <article class="card" data-category="Volkswagen" data-title="Volkswagen Fusca 1967">
+        <div class="thumb"><img
+            src="fuca67.jpg"
+            alt="Fusca 1967"></div>
+        <div class="meta">
+          <div class="title">Volkswagen Fusca 1967</div>
+          <div class="badge">1967</div>
+        </div>
+      </article>
+      <article class="card" data-category="Ferrari" data-title="Ferrari F40 1987">
+        <div class="thumb"><img
+            src="f40_convertida.webp"
+            alt="Ferrari F40"></div>
+        <div class="meta">
+          <div class="title">Ferrari F40</div>
+          <div class="badge">1987</div>
+        </div>
+      </article>
+      <article class="card" data-category="Porsche" data-title="Porsche 911 GT3">
+        <div class="thumb"><img
+            src="porsh.png"
+            alt="Porsche"></div>
+        <div class="meta">
+          <div class="title">Porsche 911 GT3</div>
+          <div class="badge">2019</div>
+        </div>
+      </article>
+      <article class="card" data-category="classicos" data-title="Chevrolet Bel Air 1957">
+        <div class="thumb"><img
+            src="1957-chevrolet-bel-air.jpg"
+            alt="Bel Air"></div>
+        <div class="meta">
+          <div class="title">Chevrolet Bel Air</div>
+          <div class="badge">1957</div>
+        </div>
+      </article>
+      <article class="card" data-category="Ford" data-title="Ford Territory 2025">
+        <div class="thumb"><img
+            src="ford-territory-2025.webp"
+            alt="Ford Territory"></div>
+        <div class="meta">
+          <div class="title">Ford Territory</div>
+          <div class="badge">2025</div>
+        </div>
+      </article>
+            <article class="card" data-category="Ford" data-title="Ford Maverick 2022">
+        <div class="thumb"><img
+            src="Maverick.webp"
+            alt="Ford Maverick"></div>
+        <div class="meta">
+          <div class="title">Ford Maverick</div>
+          <div class="badge">2022</div>
+        </div>
+      </article>
+          <article class="card" data-category="Volkswagen" data-title="fusca A5 2011">
+        <div class="thumb"><img
+            src="fusca A5.webp"
+            alt="fusca A5"></div>
+        <div class="meta">
+          <div class="title">fusca A5</div>
+          <div class="badge">2011</div>
+        </div>
+      </article>
+                <article class="card" data-category="Volkswagen" data-title="Virtus Exclusive 2023">
+        <div class="thumb"><img
+            src="virtus.png"
+            alt="Virtus Exclusive"></div>
+        <div class="meta">
+          <div class="title">Virtus Exclusive</div>
+          <div class="badge">2023</div>
+        </div>
+      </article>
+                      <article class="card" data-category="Ford" data-title="Ford Mustang 1969">
+        <div class="thumb"><img
+            src="ford-mustang-69.png"
+            alt="Ford Mustang"></div>
+        <div class="meta">
+          <div class="title">Ford Mustang</div>
+          <div class="badge">1969</div>
+        </div>
+      </article>
+                            <article class="card" data-category="Porsche" data-title="Porsche Panamera 2025">
+        <div class="thumb"><img
+            src="porsche-panamera.webp"
+            alt="Porsche Panamera 4"></div>
+        <div class="meta">
+          <div class="title">Porsche Panamera 4</div>
+          <div class="badge">2025</div>
+        </div>
+      </article>
+                                  <article class="card" data-category="BMW" data-title="BMW M4 Competition 2025">
+        <div class="thumb"><img
+            src="Bmw-m4.jpg"
+            alt="BMW M4 Competition"></div>
+        <div class="meta">
+          <div class="title">BMW M4 Competition</div>
+          <div class="badge">2025</div>
+        </div>
+      </article>
+                                        <article class="card" data-category="BMW" data-title="BMW e36 1990">
+        <div class="thumb"><img
+            src="e36.jpg"
+            alt="BMW e36"></div>
+        <div class="meta">
+          <div class="title">BMW e36</div>
+          <div class="badge">1990</div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+  <footer>
+    © Museu Virtual de Carros
+  </footer>
+  <div class="modal" id="modal">
+    <div class="sheet" role="dialog" aria-modal="true">
+      <button class="close" id="close">Fechar</button>
+      <div class="big"><img id="modalImg" src="" alt=""></div>
+      <div class="info">
+        <h3 id="modalTitle">Título</h3>
+        <p id="modalDesc">Descrição do veículo. Inclua história, especificações técnicas e curiosidades.</p>
+        <div class="specs">
+          <div class="spec" id="spec1">Motor: -</div>
+          <div class="spec" id="spec2">Potência: -</div>
+          <div class="spec" id="spec3">0-100 km/h: -</div>
+          <div class="spec" id="spec4">Velocidade máxima: -</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const gallery = document.getElementById('gallery')
+    document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+      const f = b.dataset.filter;
+      document.querySelectorAll('.card').forEach(c => c.style.display = (f === 'all' || c.dataset.category === f) ? 'block' : 'none')
+    }))
+    document.getElementById('q').addEventListener('input', e => {
+      const v = e.target.value.toLowerCase();
+      document.querySelectorAll('.card').forEach(c => c.style.display = c.dataset.title.toLowerCase().includes(v) ? 'block' : 'none')
+    })
+    gallery.addEventListener('click', e => {
+      const card = e.target.closest('.card');
+      if (!card) return;
+      const img = card.querySelector('img').src;
+      const title = card.dataset.title;
+      document.getElementById('modalImg').src = img;
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalDesc').textContent = 'Texto de exemplo: história e curiosidades sobre ' + title;
+      document.getElementById('modal').classList.add('open')
+    })
+    document.getElementById('close').addEventListener('click', () => document.getElementById('modal').classList.remove('open'))
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open')
+    })
+  </script>
+</body>
+
+</html>
