@@ -121,12 +121,21 @@
         </div>
       </article>
     </section>
-
   </main>
   <footer>
     © Museu Virtual de Carros
   </footer>
   </div>
+  <script>
+    const gallery = document.getElementById('gallery')
+    document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {
+      const f = b.dataset.filter;
+      document.querySelectorAll('.card').forEach(c => c.style.display = (f === 'all' || c.dataset.category === f) ? 'block' : 'none')
+    }))
+    document.getElementById('q').addEventListener('input', e => {
+      const v = e.target.value.toLowerCase();
+      document.querySelectorAll('.card').forEach(c => c.style.display = c.dataset.title.toLowerCase().includes(v) ? 'block' : 'none')
+    })
+  </script>
 </body>
-
 </html>
